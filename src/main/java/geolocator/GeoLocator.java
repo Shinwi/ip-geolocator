@@ -10,7 +10,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.net.UrlEscapers;
 
 import org.apache.commons.io.IOUtils;
-
+/**
+* Class for obtaining geolocation of an IP address.
+* The class uses the <a href="https://ip-api.com/">IP-API.com </a>service
+* */
 public class GeoLocator {
 
     public static final String GEOLOCATOR_SERVICE_URI = "http://ip-api.com/json/";
@@ -18,6 +21,7 @@ public class GeoLocator {
     private static ObjectMapper OBJECT_MAPPER = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
     public GeoLocator() {}
+
 
     public GeoLocation getGeoLocation() throws IOException {
         return getGeoLocation(null);
