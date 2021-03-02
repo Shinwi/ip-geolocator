@@ -10,10 +10,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.net.UrlEscapers;
 
 import org.apache.commons.io.IOUtils;
+
 /**
 * Class for obtaining geolocation of an IP address.
 * The class uses the <a href="https://ip-api.com/">IP-API.com </a>service
 * */
+
 public class GeoLocator {
 
     public static final String GEOLOCATOR_SERVICE_URI = "http://ip-api.com/json/";
